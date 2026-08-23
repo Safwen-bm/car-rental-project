@@ -19,7 +19,7 @@ const EventTypeSection = () => {
             </p>
           </div>
           {/* Button */}
-          <button className="hidden mb:hidden bg-blue-300 text-zinc-800 py-3 px-5 rounded-full cursor-pointer hover:bg-transparent border border-transparent hover:border-zinc-100 transition-all duration-200 ease-out hover:text-zinc-200 clash-display h-fit lg:centered-row gap-2">
+          <button className="hidden mb:hidden bg-gradient-to-r from-[#e8d3a0] to-[#8f7748] text-zinc-900 py-3 px-5 rounded-full cursor-pointer hover:brightness-110 transition-all duration-200 ease-out clash-display h-fit lg:centered-row gap-2">
             عرض الكل <ArrowLeft className="w-8 text-sm" />
           </button>
         </div>

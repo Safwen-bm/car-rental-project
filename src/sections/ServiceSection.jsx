@@ -21,7 +21,7 @@ const ServiceSection = () => {
 
           <Link
             to="/fleet"
-            className="mt-4 sm:mt-0 flex items-center text-sky-500 hover:text-sky-400 transition-colors"
+            className="mt-4 sm:mt-0 flex items-center text-[#c9a567] hover:text-[#e8d3a0] transition-colors"
           >
             عرض جميع السيارات <MoveLeft className="mr-1 h-4 w-4" />
           </Link>

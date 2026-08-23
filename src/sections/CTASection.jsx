@@ -59,7 +59,7 @@ const CTASection = () => {
           </div>
 
           {/* Discount Banner */}
-          <div className="hidden lg:block w-50 h-40 bg-blue-400/80 text-zinc-200 p-6 px-8">
+          <div className="hidden lg:block w-50 h-40 bg-gradient-to-br from-[#c9a567]/90 to-[#8f7748]/90 text-zinc-900 p-6 px-8">
             <div className="col">
               <p className="heading-2 clash-display font-semibold">%50</p>
               <p className="text-xl leading-tight clash-display">
