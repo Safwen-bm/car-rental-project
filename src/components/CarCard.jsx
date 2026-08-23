@@ -1,6 +1,6 @@
 import BookNowButton from "./BookNowButton";
 
-const CarCard = ({ image, name }) => {
+const CarCard = ({ image, name, price }) => {
   return (
     <div
       style={{
@@ -16,13 +16,15 @@ const CarCard = ({ image, name }) => {
         <h2 className="text-3xl clash-display">{name}</h2>
       </div>
 
-      {/* BTNS */}
-      <div className="bottom-0 bg-gradient-to-t w-full from-zinc-950 to-transparent centered-row justify-between p-7">
-        {/* Price Per Day */}
-        <p className="text-lg clash-display">150 TND/day</p>
-        {/* Book Button */}
-        <BookNowButton />
-      </div>
+      {/* BTNS — only render price/booking if this card actually has a price */}
+      {price && (
+        <div className="bottom-0 bg-gradient-to-t w-full from-zinc-950 to-transparent centered-row justify-between p-7">
+          {/* Price Per Day */}
+          <p className="text-lg clash-display">{price} د.ت / اليوم</p>
+          {/* Book Button */}
+          <BookNowButton />
+        </div>
+      )}
     </div>
   );
 };

@@ -11,7 +11,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 import { useState, useEffect, useRef } from "react";
-import { goodColors } from "../../assets/assets";
+import { carPaintColors } from "../../assets/assets";
 import { Color } from "three";
 
 export function Toyota_Rav4(props) {
@@ -23,8 +23,8 @@ export function Toyota_Rav4(props) {
     materials.Color_2,
   ].filter(Boolean);
 
-  const currentColor = useRef(new Color(goodColors[0]));
-  const targetColor = useRef(new Color(goodColors[0]));
+  const currentColor = useRef(new Color(carPaintColors[0]));
+  const targetColor = useRef(new Color(carPaintColors[0]));
 
   // Strip maps + set roughness once on mount
   useEffect(() => {
@@ -37,7 +37,7 @@ export function Toyota_Rav4(props) {
 
   // Update lerp target when index changes
   useEffect(() => {
-    targetColor.current.set(goodColors[targetColorIndex]);
+    targetColor.current.set(carPaintColors[targetColorIndex]);
   }, [targetColorIndex]);
 
   // Smooth color interpolation
@@ -48,7 +48,7 @@ export function Toyota_Rav4(props) {
 
   const changeColorOnClick = (e) => {
     e.stopPropagation();
-    setTargetColorIndex((prevIndex) => (prevIndex + 1) % goodColors.length);
+    setTargetColorIndex((prevIndex) => (prevIndex + 1) % carPaintColors.length);
   };
 
   return (

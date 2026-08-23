@@ -50,10 +50,10 @@ const ServiceCard = ({ title, description, icon, imageSrc }) => {
         </div>
       )}
 
-      {/* Button */}
+      {/* Button — flipped in RTL so it still points toward reading start */}
       <div className="bg-gradient-to-t absolute bottom-0 from-zinc-950 py-7 px-7 to-transparent flex min-w-full justify-end">
         <div className="h-16 w-16 bg-zinc-100 rounded-full cursor-pointer hover:bg-sky-200 transition-all duration-300 ease-out hover:-translate-y-1 center-item">
-          <ArrowRight className="text-zinc-800 font-semibold -rotate-45 hover:-translate-y-1 transition" />
+          <ArrowRight className="text-zinc-800 font-semibold -rotate-45 rtl:rotate-[135deg] hover:-translate-y-1 transition" />
         </div>
       </div>
     </div>

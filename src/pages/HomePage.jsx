@@ -10,7 +10,7 @@ const HomePage = () => {
       <ServiceSection />
       <EventTypeSection />
 
-      {/* Captivationg CTA: 3D Experience */}
+      {/* Captivating CTA: 3D Experience */}
       <CTASection />
     </div>
   );

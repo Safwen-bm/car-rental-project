@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { carUsageCategories } from "../assets/assets";
 import CarCard from "../components/CarCard";
 
@@ -11,28 +11,24 @@ const EventTypeSection = () => {
           {/* Text */}
           <div>
             <h2 className="heading-2 clash-display grad1 from-zinc-50 max-w-2xl">
-              Perfect Ride For Every Occasion
+              السيارة المثالية لكل مناسبة
             </h2>
             <p className="text-zinc-400 max-w-md">
-              Find the ideal car for your business needs, family adventures, or
-              special moments.
+              اعثر على السيارة المناسبة لاحتياجات عملك أو رحلاتك العائلية أو
+              لحظاتك الخاصة.
             </p>
           </div>
           {/* Button */}
           <button className="hidden mb:hidden bg-blue-300 text-zinc-800 py-3 px-5 rounded-full cursor-pointer hover:bg-transparent border border-transparent hover:border-zinc-100 transition-all duration-200 ease-out hover:text-zinc-200 clash-display h-fit lg:centered-row gap-2">
-            See All <ArrowRight className="w-8 text-sm" />
+            عرض الكل <ArrowLeft className="w-8 text-sm" />
           </button>
         </div>
         {/* GRID */}
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
           {/* CarCards */}
-
-          {
-            carUsageCategories.map((event,index) => (
-              <CarCard key={index} {...event} />
-            ))
-          }
+          {carUsageCategories.map((event, index) => (
+            <CarCard key={index} {...event} />
+          ))}
         </div>
       </div>
     </section>

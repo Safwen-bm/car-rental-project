@@ -18,21 +18,15 @@ const NavBar = () => {
   }, []);
 
   // NavLinks Data
-
   const navLinks = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "Fleet",
-      path: "/fleet",
-    },
-    {
-      name: "About Us",
-      path: "/about",
-    },
+    { name: "الرئيسية", path: "/" },
+    { name: "الأسطول", path: "/fleet" },
+    { name: "من نحن", path: "/about" },
   ];
+
+  // Mobile menu entries (path + label kept in sync by index)
+  const mobileNavPaths = ["/", "/fleet", "/about", "/rent"];
+  const mobileNavLabels = ["الرئيسية", "الأسطول", "من نحن", "احجز الآن"];
 
   // MobileNavLink Classes
   const getNavLinkClass = ({ isActive }) =>
@@ -51,7 +45,6 @@ const NavBar = () => {
       <div className="mx-auto h-full px-6">
         <nav className="centered-row justify-between h-full">
           {/* Logo */}
-
           <NavLink to="/" className="flex items-center">
             <div className="h-auto relative centered-row gap-2">
               {/* Icon */}
@@ -61,7 +54,8 @@ const NavBar = () => {
                 }`}
               />
 
-              {/* Text */}
+              {/* Text — brand mark kept in Latin, common practice for
+                  Tunisian/regional brands even on Arabic sites */}
               <p
                 className={`tracking-tighter cursor-pointer text-xl clash-display font-medium ${
                   isScrolled ? "text-zinc-200" : "text-zinc-700"
@@ -95,7 +89,7 @@ const NavBar = () => {
           <div className="md:centered-row gap-2 hidden">
             <Link to="/rent">
               <button className="clash-display text-base bg-gradient-to-r from-zinc-700 to-zinc-950 px-4 py-2 rounded-full cursor-pointer hover:-translate-y-0.5 duration-200 transition-all ease-out">
-                Rent Today
+                احجز الآن
               </button>
             </Link>
 
@@ -123,7 +117,6 @@ const NavBar = () => {
           </div>
 
           {/* Mobile Nav Menu */}
-
           <div
             className={`absolute md:hidden -top-5 w-full h-screen bg-zinc-50 backdrop-blur-lg transition-transform duration-300 ease-in-out z-[999] flex flex-col justify-between ${
               isOpen ? "-translate-x-6" : "translate-x-[1500px]"
@@ -135,19 +128,20 @@ const NavBar = () => {
                 onClick={() => setIsOpen(false)}
                 className="centered-row p-4 gap-2"
               >
-                <ChevronLeft className="text-zinc-800" />
-                <p className="text-lg clash-display text-zinc-800">Back</p>
+                {/* Flipped in RTL so "back" still points toward reading start */}
+                <ChevronLeft className="text-zinc-800 rtl:rotate-180" />
+                <p className="text-lg clash-display text-zinc-800">رجوع</p>
               </button>
             </div>
             {/* MobileNav Links */}
             <div className="col flex-1 text-zinc-800 pb-4">
-              {["/", "/fleet", "/about", "/rent"].map((path, i) => (
+              {mobileNavPaths.map((path, i) => (
                 <NavLink key={i} to={path} className={getNavLinkClass}>
                   <button
                     onClick={() => setIsOpen(false)}
                     className="text-xl w-full clash-display"
                   >
-                    {["Home", "Fleet", "About Us", "Rent Now"][i]}
+                    {mobileNavLabels[i]}
                   </button>
                 </NavLink>
               ))}
@@ -155,7 +149,7 @@ const NavBar = () => {
             {/* MobileNav Footer */}
             <div className="text-center text-sm pt-8 pb-8 text-zinc-500">
               &copy; {new Date().getFullYear()}{" "}
-              <span className="font-semibold">IRent</span> All rights reserved.
+              <span className="font-semibold">IRent</span> جميع الحقوق محفوظة.
             </div>
           </div>
         </nav>

@@ -1,16 +1,16 @@
-import audi from "./images/audi.jpg";
-import car1 from "./images/car1.png";
-import car2 from "./images/car2.png";
-import car3 from "./images/car3.png";
-import car4 from "./images/car4.png";
-import car5 from "./images/car5.png";
-import car6 from "./images/car6.png";
-import car7 from "./images/car7.png";
-import car8 from "./images/car8.png";
-import car9 from "./images/car9.png";
-import car10 from "./images/car10.png";
-import car11 from "./images/car11.png";
-import carin from "./images/carin.png";
+import weekendGetawayCar from "./images/weekend-getaway.jpg";
+import luxurySedan from "./images/luxury-sedan.jpg";
+import compactEv from "./images/compact-ev.jpg";
+import premiumSedan from "./images/premium-sedan.jpg";
+import flexibleHandoverCar from "./images/flexible-handover.avif";
+import familySuv from "./images/family-suv.jpg";
+import luxurySuv from "./images/luxury-suv.jpg";
+import electricSportster from "./images/electric-sportster.jpg";
+import roadsideSupportCar from "./images/roadside-support.jpg";
+import insuranceCoverageCar from "./images/insurance-coverage.jpg";
+import compactHatchback from "./images/compact-hatchback.jpg";
+import sportsCoupe from "./images/sports-coupe.jpg";
+import pickupTruck from "./images/pickup-truck.jpg"; // MISSING - add this file (Ford Ranger)
 
 // Feature Icons
 import { FaBluetooth, FaChargingStation } from "react-icons/fa";
@@ -31,292 +31,310 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const images = {
-  car1,
-  audi,
-  car2,
-  car3,
-  car4,
-  car5,
-  car6,
-  car7,
-  car8,
-  car9,
-  car10,
-  car11,
-  carin,
+const vehicleImages = {
+  weekendGetawayCar,
+  luxurySedan,
+  compactEv,
+  premiumSedan,
+  flexibleHandoverCar,
+  familySuv,
+  luxurySuv,
+  electricSportster,
+  roadsideSupportCar,
+  insuranceCoverageCar,
+  compactHatchback,
+  sportsCoupe,
+  pickupTruck,
 };
 
 const featuredServices = [
   {
-    title: "Luxury Sedans",
+    title: "سيارات صالون فاخرة",
     description:
-      "Experience elegance and comfort with our top-tier luxury sedans, perfect for business or leisure.",
+      "استمتع بالأناقة والراحة مع أرقى سيارات الصالون الفاخرة، مثالية للأعمال أو الترفيه.",
     icon: <Car size={24} />,
-    imageSrc: images.car2, // Placeholder for specific car image
+    imageSrc: vehicleImages.luxurySedan,
     link: "/fleet#luxury",
   },
   {
-    title: "SUVs & Crossovers",
+    title: "سيارات الدفع الرباعي",
     description:
-      "Spacious and versatile vehicles for family trips, group adventures, or demanding terrain.",
-    icon: <Fuel size={24} />, // Represents fuel/journey
-    imageSrc: images.car8,
+      "سيارات واسعة ومتعددة الاستخدامات لرحلات العائلة والمغامرات الجماعية أو التضاريس الصعبة.",
+    icon: <Fuel size={24} />,
+    imageSrc: vehicleImages.familySuv,
     link: "/fleet#suv",
   },
   {
-    title: "Electric Vehicles",
+    title: "السيارات الكهربائية",
     description:
-      "Drive green with our selection of modern electric cars, combining sustainability with performance.",
+      "قُد بأسلوب صديق للبيئة مع تشكيلتنا من السيارات الكهربائية الحديثة، الجامعة بين الاستدامة والأداء.",
     icon: <BatteryCharging size={24} />,
-    imageSrc: images.car3,
+    imageSrc: vehicleImages.compactEv,
     link: "/fleet#ev",
   },
   {
-    title: "24/7 Roadside Support",
+    title: "مساعدة على الطريق ٢٤/٧",
     description:
-      "Peace of mind with around-the-clock assistance for any unexpected situations on your journey.",
-    icon: <LifeBuoy size={24} />, // Represents support/safety
-    imageSrc: images.car11, // Placeholder for support image
+      "راحة بال تامة بفضل دعم متواصل على مدار الساعة لأي موقف غير متوقع خلال رحلتك.",
+    icon: <LifeBuoy size={24} />,
+    imageSrc: vehicleImages.roadsideSupportCar,
     link: "/services#support",
   },
   {
-    title: "Flexible Pickup & Dropoff",
+    title: "استلام وتسليم مرن",
     description:
-      "Choose your convenient location for vehicle pickup and return, tailored to your schedule.",
+      "اختر المكان الأنسب لاستلام السيارة وإعادتها، حسب جدولك الخاص.",
     icon: <MapPin size={24} />,
-    imageSrc: images.car7,
+    imageSrc: vehicleImages.flexibleHandoverCar,
     link: "/services#pickup",
   },
   {
-    title: "Premium Insurance",
-    description:
-      "Comprehensive coverage options for a worry-free rental experience.",
-    icon: <ShieldCheck size={24} />, // Represents insurance/protection
-    imageSrc: images.carin,
+    title: "تأمين شامل",
+    description: "خيارات تغطية متكاملة لتجربة إيجار خالية من القلق.",
+    icon: <ShieldCheck size={24} />,
+    imageSrc: vehicleImages.insuranceCoverageCar,
     link: "/services#insurance",
   },
 ];
 
+// None of these 4 images overlap with featuredServices
+// (featuredServices uses: luxurySedan, familySuv, compactEv, roadsideSupportCar,
+// flexibleHandoverCar, insuranceCoverageCar — all avoided below)
 const carUsageCategories = [
   {
-    name: "Business Trips",
-    image: images.car2,
+    name: "رحلات العمل",
+    image: vehicleImages.premiumSedan,
   },
-  { name: "Family Vacations", image: images.car8 },
-  { name: "Weekend Getaways", image: images.car1 },
+  { name: "عطلات عائلية", image: vehicleImages.luxurySuv },
+  { name: "رحلات نهاية الأسبوع", image: vehicleImages.weekendGetawayCar },
   {
-    name: "Special Events",
-
-    image: images.car11,
+    name: "مناسبات خاصة",
+    image: vehicleImages.sportsCoupe,
   },
 ];
 
-const FEATURE_ICONS = [
+const featureIcons = [
   {
     name: "Bluetooth",
     icon: FaBluetooth,
-    label: "Bluetooth",
-    colorClass: "text-sky-500/90", // Example of a specific color class if needed
+    label: "بلوتوث",
+    colorClass: "text-sky-500/90",
   },
   {
     name: "AC",
     icon: AirVent,
-    label: "A/C",
+    label: "تكييف",
     colorClass: "text-zinc-400",
   },
   {
     name: "GPS",
     icon: FaLocationDot,
-    label: "GPS Tracker",
+    label: "تتبع GPS",
     colorClass: "text-zinc-400",
   },
   {
-    name: "Fast Charging",
+    name: "FastCharging",
     icon: FaChargingStation,
-    label: "Fast Charging",
+    label: "شحن سريع",
     colorClass: "text-zinc-400",
   },
   {
-    name: "Premium Audio",
+    name: "PremiumAudio",
     icon: BiSpeaker,
-    label: "Premium Audio",
+    label: "نظام صوتي فاخر",
     colorClass: "text-zinc-400",
   },
   {
-    name: "Child Seats",
+    name: "ChildSeats",
     icon: BiChild,
-    label: "Child Seats",
+    label: "مقاعد أطفال",
     colorClass: "text-zinc-400",
   },
-  // Add more features here as needed
-  // { name: "Sunroof", icon: RiSunroofLine, label: "Sunroof" },
 ];
 
-const dummyCarImages = [
-  images.car2,
-  images.car6,
-  images.car1,
-  images.car3,
-  images.car11,
-  images.car5,
-  images.car10,
-  images.car9,
+// Preview pool used by the fleet listing page.
+// Now 9 entries (one per car in fleetCatalog below, including the new Ford Ranger),
+// all unique.
+const fleetPreviewImages = [
+  vehicleImages.luxurySedan,       // 0 -> CAR001 Mercedes S-Class
+  vehicleImages.familySuv,         // 1 -> CAR002 Land Rover Defender
+  vehicleImages.sportsCoupe,       // 2 -> CAR003 Ford Mustang
+  vehicleImages.compactEv,         // 3 -> CAR004 VW ID.3
+  vehicleImages.premiumSedan,      // 4 -> CAR005 BMW 3 Series
+  vehicleImages.compactHatchback,  // 5 -> CAR006 VW Golf MK8
+  vehicleImages.luxurySuv,         // 6 -> CAR007 Porsche Cayenne
+  vehicleImages.electricSportster, // 7 -> CAR008 Tesla Model S
+  vehicleImages.pickupTruck,       // 8 -> CAR009 Ford Ranger
 ];
 
-const mockCarsData = [
+// Fleet catalog — real models, real specs.
+const fleetCatalog = [
   {
     id: "CAR001",
-    name: "Luxury Sedan A",
-    type: "Sedan",
-    capacity: 4,
-    pricePerHour: 35.0,
-    color: "Black",
-    transmission: "Automatic",
-    fuelType: "Gasoline",
+    name: "مرسيدس S-Class",
+    type: "صالون",
+    capacity: 5,
+    pricePerHour: 250.0,
+    color: "أسود",
+    transmission: "أوتوماتيك",
+    fuelType: "بنزين",
     features: ["GPS", "Bluetooth", "AC"],
-    image: dummyCarImages[0],
+    image: fleetPreviewImages[0],
   },
   {
     id: "CAR002",
-    name: "Family SUV X",
+    name: "لاند روفر ديفندر",
     type: "SUV",
     capacity: 7,
-    pricePerHour: 45.0,
-    color: "White",
-    transmission: "Automatic",
-    fuelType: "Gasoline",
-    features: ["GPS", "AC", "Child Seats"],
-    image: dummyCarImages[1],
+    pricePerHour: 190.0,
+    color: "أبيض",
+    transmission: "أوتوماتيك",
+    fuelType: "بنزين",
+    features: ["GPS", "AC", "ChildSeats"],
+    image: fleetPreviewImages[1],
   },
   {
     id: "CAR003",
-    name: "Sporty Coupe Z",
-    type: "Sports",
+    name: "فورد موستنج",
+    type: "رياضية",
     capacity: 2,
-    pricePerHour: 60.0,
-    color: "Red",
-    transmission: "Manual",
-    fuelType: "Gasoline",
-    features: ["GPS", "Bluetooth", "Premium Audio"],
-    image: dummyCarImages[2],
+    pricePerHour: 160.0,
+    color: "أحمر",
+    transmission: "يدوي",
+    fuelType: "بنزين",
+    features: ["GPS", "Bluetooth", "PremiumAudio"],
+    image: fleetPreviewImages[2],
   },
   {
     id: "CAR004",
-    name: "Eco Electric 500",
+    name: "فولكس فاجن ID.3",
     type: "EV",
     capacity: 5,
-    pricePerHour: 40.0,
-    color: "Blue",
-    transmission: "Automatic",
-    fuelType: "Electric",
-    features: ["GPS", "Bluetooth", "Fast Charging"],
-    image: dummyCarImages[3],
+    pricePerHour: 80.0,
+    color: "أزرق",
+    transmission: "أوتوماتيك",
+    fuelType: "كهرباء",
+    features: ["GPS", "Bluetooth", "FastCharging"],
+    image: fleetPreviewImages[3],
   },
   {
     id: "CAR005",
-    name: "Premium Sedan B",
-    type: "Sedan",
-    capacity: 4,
-    pricePerHour: 38.0,
-    color: "White",
-    transmission: "Automatic",
-    fuelType: "Gasoline",
+    name: "بي إم دبليو الفئة الثالثة",
+    type: "صالون",
+    capacity: 5,
+    pricePerHour: 135.0,
+    color: "أبيض",
+    transmission: "أوتوماتيك",
+    fuelType: "بنزين",
     features: ["GPS", "Bluetooth", "Sunroof"],
-    image: dummyCarImages[4],
+    image: fleetPreviewImages[4],
   },
   {
     id: "CAR006",
-    name: "Compact Hatch 20",
-    type: "Compact",
-    capacity: 4,
-    pricePerHour: 25.0,
-    color: "Gray",
-    transmission: "Manual",
-    fuelType: "Gasoline",
-    features: ["AC", "Premium Audio"],
-    image: dummyCarImages[5],
+    name: "فولكس فاجن جولف MK8",
+    type: "مدمجة",
+    capacity: 5,
+    pricePerHour: 100.0,
+    color: "رمادي",
+    transmission: "يدوي",
+    fuelType: "بنزين",
+    features: ["AC", "PremiumAudio"],
+    image: fleetPreviewImages[5],
   },
   {
     id: "CAR007",
-    name: "Luxury SUV Y",
+    name: "بورش كايين",
     type: "SUV",
-    capacity: 7,
-    pricePerHour: 55.0,
-    color: "Black",
-    transmission: "Automatic",
-    fuelType: "Diesel",
-    features: ["GPS", "AC", "Leather Seats"],
-    image: dummyCarImages[6],
+    capacity: 5,
+    pricePerHour: 200.0,
+    color: "أسود",
+    transmission: "أوتوماتيك",
+    fuelType: "ديزل",
+    features: ["GPS", "AC", "LeatherSeats"],
+    image: fleetPreviewImages[6],
   },
   {
     id: "CAR008",
-    name: "Electric Sportster",
+    name: "تسلا موديل S",
     type: "EV",
-    capacity: 2,
-    pricePerHour: 65.0,
-    color: "Silver",
-    transmission: "Automatic",
-    fuelType: "Electric",
-    features: ["GPS", "Premium Audio", "Heated Seats"],
-    image: dummyCarImages[7],
+    capacity: 5,
+    pricePerHour: 130.0,
+    color: "فضي",
+    transmission: "أوتوماتيك",
+    fuelType: "كهرباء",
+    features: ["GPS", "PremiumAudio", "HeatedSeats"],
+    image: fleetPreviewImages[7],
+  },
+  {
+    id: "CAR009",
+    name: "فورد رينجر",
+    type: "بيك أب",
+    capacity: 5,
+    pricePerHour: 120.0,
+    color: "أبيض",
+    transmission: "أوتوماتيك",
+    fuelType: "ديزل",
+    features: ["GPS", "Bluetooth", "AC"],
+    image: fleetPreviewImages[8],
   },
 ];
 
-const togglerBtns = [
+// Highlight strip shown above the 3D CTA section.
+const ctaHighlights = [
   {
     id: "001",
     icon: <Newspaper className="w-10 h-10" />,
-    name: "Seamless booking",
+    name: "حجز سلس وسريع",
     action: null,
     isPlaying: true,
   },
   {
     id: "002",
     icon: <Sparkles className="w-14 h-14" />,
-    name: "Premium privileges for regular customers",
+    name: "امتيازات حصرية للعملاء الدائمين",
     action: null,
     isPlaying: false,
   },
   {
     id: "003",
     icon: <Clock10 className="w-25 h-25" />,
-    name: "Change or cancel your booking upto 72 hours before pickup time",
+    name: "غيّر أو ألغِ حجزك حتى ٧٢ ساعة قبل موعد الاستلام",
     action: null,
     isPlaying: false,
   },
   {
     id: "004",
     icon: <BatteryChargingIcon className="w-10 h-15" />,
-    name: "Free Charging",
+    name: "شحن مجاني",
     action: null,
     isPlaying: false,
   },
 ];
 
-const goodColors = [
-  "#FFFFFF", // Super White
-  "#0A0A0A", // Heavy Black (true deep black, not metallic)
-  "#1C1C1C", // Midnight Black Metallic
-  "#837F7D", // Magnetic Gray Metallic
-  "#5F778C", // Cavalry Blue
-  "#0B1F3A", // Heavy Blue (deep navy, almost black-blue)
-  "#6B0000", // Heavy Red (dark blood red, aggressive)
-  "#8B0000", // Ruby Flare Pearl
-  "#C1BFC0", // Silver Sky Metallic
-  "#3D3F42", // Underground
-  "#4A5D52", // Army Green
-  "#7F7A70", // Bronze Oxide Metallic
-  "#28282B", // Blackout
+// Paint options for the 3D configurator.
+const carPaintColors = [
+  "#FFFFFF", // أبيض ناصع
+  "#0A0A0A", // أسود داكن
+  "#1C1C1C", // أسود معدني
+  "#837F7D", // رمادي مغناطيسي
+  "#5F778C", // أزرق كافالري
+  "#0B1F3A", // أزرق داكن جدا
+  "#6B0000", // أحمر داكن
+  "#8B0000", // أحمر ياقوتي لؤلؤي
+  "#C1BFC0", // فضي معدني
+  "#3D3F42", // رمادي غامق
+  "#4A5D52", // أخضر عسكري
+  "#7F7A70", // برونزي معدني
+  "#28282B", // أسود مطفي
 ];
 
 export {
-  images,
+  vehicleImages,
   featuredServices,
   carUsageCategories,
-  FEATURE_ICONS,
-  dummyCarImages,
-  mockCarsData,
-  togglerBtns,
-  goodColors,
+  featureIcons,
+  fleetPreviewImages,
+  fleetCatalog,
+  ctaHighlights,
+  carPaintColors,
 };

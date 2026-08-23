@@ -7,7 +7,7 @@ import { Toyota_Rav4 } from "./models/2023_rav4";
 const ModelViewer = () => {
   const [webglSupported, setWebglSupported] = useState(true);
 
-  // Device Suport checking
+  // Device Support checking
   useEffect(() => {
     try {
       const canvas = document.createElement("canvas");
@@ -20,7 +20,8 @@ const ModelViewer = () => {
     }
   }, []);
 
-  if (!webglSupported) return <div>WebGL not supported on this device.</div>;
+  if (!webglSupported)
+    return <div>WebGL غير مدعوم على هذا الجهاز.</div>;
 
   return (
     <Canvas
@@ -33,7 +34,7 @@ const ModelViewer = () => {
       onCreated={({ gl }) => {
         gl.getContext().canvas.addEventListener("webglcontextlost", (e) => {
           e.preventDefault();
-          alert("WebGL context lost - reload the page.");
+          alert("تم فقدان سياق WebGL - يرجى إعادة تحميل الصفحة.");
         });
       }}
     >

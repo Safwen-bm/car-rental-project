@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { togglerBtns } from "../assets/assets";
+import { ctaHighlights } from "../assets/assets";
 import BookNowButton from "../components/BookNowButton";
 import ModelViewer from "../components/ModelViewer";
 
@@ -10,7 +10,7 @@ const CTASection = () => {
     <>
       {/* SECTION TOGGLERS */}
       <div className="w-full h-[200px] bg-zinc-950 flex overflow-x-scroll lg:overflow-clip snap-x snap-mandatory">
-        {togglerBtns.map((item, index) => (
+        {ctaHighlights.map((item, index) => (
           <div
             onClick={() => setActiveIndex(index)}
             key={index}
@@ -49,11 +49,11 @@ const CTASection = () => {
           {/* TEXT */}
           <div>
             <h2 className="heading-2 clash-display max-w-2xl pointer-events-none">
-              View Closely Your Perfect Ride in 3D
+              شاهد سيارتك المثالية عن قرب بتقنية ثلاثية الأبعاد
             </h2>
             <p className="text-gray-300 max-w-md pointer-events-none mb-8">
-              Browse our extensive fleet in 3D, book with ease, and embark on
-              your next unforgettable journey.
+              تصفح أسطولنا الواسع بتقنية ثلاثية الأبعاد، احجز بسهولة، وانطلق
+              في رحلتك القادمة التي لا تُنسى.
             </p>
             <BookNowButton type={2} />
           </div>
@@ -61,9 +61,9 @@ const CTASection = () => {
           {/* Discount Banner */}
           <div className="hidden lg:block w-50 h-40 bg-blue-400/80 text-zinc-200 p-6 px-8">
             <div className="col">
-              <p className="heading-2 clash-display font-semibold">50%</p>
+              <p className="heading-2 clash-display font-semibold">%50</p>
               <p className="text-xl leading-tight clash-display">
-                For all our brand cars
+                على جميع سياراتنا المميزة
               </p>
             </div>
           </div>
