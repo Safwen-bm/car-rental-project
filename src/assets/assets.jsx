@@ -295,29 +295,19 @@ const togglerBtns = [
 ];
 
 const goodColors = [
-  // Classic & Common Solids
-  "#4682B4", // Steel Blue Metallic (Strong, deep blue with metallic
-  "#000000", // Black (Classic, timeless)
-  "#36454F", // Charcoal Gray (Dark, sophisticated)
-  "#E6E6FA", // Lavender White (Soft, slightly off-white)
-  "#800000", // Maroon (Deep, rich red)
-  "#000080", // Navy Blue (Dark, elegant blue)
-  "#808080", // Gray (Neutral, versatile)
-  "#FFD700", // Gold (Bright, luxurious yellow)
-  "#C0C0C0", // Silver (Bright, reflective gray)
-  "#228B22", // Forest Green (Deep, earthy green)
-
-  // Modern Metallics & Pearls (approximated with hex codes)
-  "#A9A9A9", // Dark Gray Metallic (Common, sleek)
-  "#C0C0C0", // Silver Metallic (Timeless, reflects light well)
-  "#F5F5DC", // Pearl White (Soft, creamy white with subtle shimmer)
-  "#4682B4", // Steel Blue Metallic (Strong, deep blue with metallic sheen)
-  "#8B0000", // Dark Red Metallic (Deep, lustrous red)
-  "#5F9EA0", // Cadet Blue Metallic (Unique, muted blue-green)
-  "#6B8E23", // Olive Drab (Subtle, rugged green)
-  "#DAA520", // Goldenrod (Warm, understated gold/bronze)
-  "#708090", // Slate Gray Metallic (Slightly bluish-gray, sophisticated)
-  "#BDB76B", // Dark Khaki (Earth tone, military-inspired)
+  "#FFFFFF", // Super White
+  "#0A0A0A", // Heavy Black (true deep black, not metallic)
+  "#1C1C1C", // Midnight Black Metallic
+  "#837F7D", // Magnetic Gray Metallic
+  "#5F778C", // Cavalry Blue
+  "#0B1F3A", // Heavy Blue (deep navy, almost black-blue)
+  "#6B0000", // Heavy Red (dark blood red, aggressive)
+  "#8B0000", // Ruby Flare Pearl
+  "#C1BFC0", // Silver Sky Metallic
+  "#3D3F42", // Underground
+  "#4A5D52", // Army Green
+  "#7F7A70", // Bronze Oxide Metallic
+  "#28282B", // Blackout
 ];
 
 export {
