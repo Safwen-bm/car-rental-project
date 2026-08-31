@@ -1,16 +1,16 @@
-import weekendGetawayCar from "./images/weekend-getaway.jpg";
-import luxurySedan from "./images/luxury-sedan.jpg";
-import compactEv from "./images/compact-ev.jpg";
-import premiumSedan from "./images/premium-sedan.jpg";
+import weekendGetawayCar from "./images/weekend-getaway.webp";
+import luxurySedan from "./images/luxury-sedan.webp";
+import compactEv from "./images/compact-ev.webp";
+import premiumSedan from "./images/premium-sedan.webp";
 import flexibleHandoverCar from "./images/flexible-handover.avif";
-import familySuv from "./images/family-suv.jpg";
-import luxurySuv from "./images/luxury-suv.jpg";
-import electricSportster from "./images/electric-sportster.jpg";
-import roadsideSupportCar from "./images/roadside-support.jpg";
-import insuranceCoverageCar from "./images/insurance-coverage.jpg";
-import compactHatchback from "./images/compact-hatchback.jpg";
-import sportsCoupe from "./images/sports-coupe.jpg";
-import pickupTruck from "./images/pickup-truck.jpg"; // MISSING - add this file (Ford Ranger)
+import familySuv from "./images/family-suv.webp";
+import luxurySuv from "./images/luxury-suv.webp";
+import electricSportster from "./images/electric-sportster.webp";
+import roadsideSupportCar from "./images/roadside-support.webp";
+import insuranceCoverageCar from "./images/insurance-coverage.webp";
+import compactHatchback from "./images/compact-hatchback.webp";
+import sportsCoupe from "./images/sports-coupe.webp";
+import pickupTruck from "./images/pickup-truck.webp";
 
 // Feature Icons
 import { FaBluetooth, FaChargingStation } from "react-icons/fa";

@@ -19,7 +19,7 @@ const HeroSection = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="/luxury-sedan.jpg"
+          src="/hero-bg.webp"
           alt="سيارة فاخرة للإيجار"
           className="h-full w-full object-cover object-center scale-105"
         />
